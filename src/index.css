@@ -1,0 +1,41 @@
+#root {
+  background-color: white;
+  margin: 0px;
+  height: 100%;
+}
+
+.title {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font: size 12px;
+  font-weight: bold;
+  margin: 1rem 1rem;
+  padding: 1rem;
+  border: 1px solid;
+}
+
+.article_content {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font: size 12px;
+  font-weight: bold;
+  margin: 1rem 0rem 3rem 0;
+  padding: 2rem;
+  border: 1px solid;
+}
+
+.link_to_more {
+  font-size: 2rem;
+  margin: 0 0 0 8rem;
+
+  padding: 10px;
+  color: white;
+  background-color: green;
+}
+
+/* .stock_card_page {
+  background-color: rgb(84, 79, 85); */
+
+.logo {
+  height: 100vh;
+}

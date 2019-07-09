@@ -1,0 +1,21 @@
+{
+  "name": "Learn to invest",
+  "short_name": "L&I",
+  "icons": [
+      {
+          "src": "/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+      },
+      {
+          "src": "/android-chrome-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+      }
+  ],
+  "theme_color": "#809bd2",
+  "background_color": "#809bd2",
+  "start_url": "/onboarding1",
+  "display": "standalone",
+  "orientation": "portrait"
+}
