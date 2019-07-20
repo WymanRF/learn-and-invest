@@ -3,34 +3,14 @@ import HeaderBar from "../components/headerBar";
 import Profile from "../components/ProfileHeader";
 import ProgressBar from "../components/progressBar";
 import DashCard from "../components/dashCard";
-import axios from 'axios'
-import headshots from "../images/headshots-chicago-18.jpg";
 
 class PageTwo extends Component {
-  state = {first_name: 'Guest',
-            last_name: 'User',
-            img: ''
-          }
-
-  componentDidMount(){
-    let config = {
-      headers: {
-        'Authorization': window.auth_token,
-        'Content-Type': 'application/json'}
-    }
-    axios.get(("http://localhost:3001/customers/1"),
-    config).then( response => {
-      this.setState( {first_name: response.data.customer.first_name,
-        last_name: response.data.customer.last_name,
-         img:headshots})
-    })  
-  }
 
   render() {
     return (
-      <>
-        <HeaderBar {...this.state} />
-        <Profile {...this.state}/>
+      <div id='pageTwo'>
+        <HeaderBar />
+        <Profile />
         <ProgressBar />
         <div
           className="count"
@@ -63,9 +43,9 @@ class PageTwo extends Component {
           
         </div>
         <DashCard />
-      </>
+      </div>
     );
   }
 }
 
-export default PageTwo;
+export default PageTwo

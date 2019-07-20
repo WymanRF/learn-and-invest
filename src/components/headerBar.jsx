@@ -3,7 +3,6 @@ import Search from "./Search";
 import Nav from "./Nav";
 import Input from "./Input";
 import "../index.css";
-import headshots from "../images/headshots-chicago-18.jpg";
 
 class HeaderBar extends Component {
   state = {

@@ -49,9 +49,9 @@ class Learn1 extends Component {
 
   render() {
     return (
-      <>
+      <div id='learn1Page'>
         <HeaderBar />
-        <div>
+        <div >
           {this.state.articles.map((article, index) => {
             return (
               <Link
@@ -67,14 +67,14 @@ class Learn1 extends Component {
                 key={index}
               >
                 <div style={articleStyle}>
-                  <img style={articleImgStyle} src={article.urlToImage} />
+                  <img style={articleImgStyle} src={article.urlToImage} alt=''/>
                   <div style={articleTitleStyle}>{article.title}</div>
                 </div>
               </Link>
             );
           })}
         </div>
-      </>
+      </div>
     );
   }
 }

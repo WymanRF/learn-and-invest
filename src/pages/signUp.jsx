@@ -1,72 +1,9 @@
 import React, { Component } from 'react'
 import {NavLink} from 'react-router-dom'
 import Input from '../components/Input'
-import axios from 'axios'
-import M from "materialize-css"
-
-const grabTokenAPI = (email, password, callback) => {
-  axios.post('http://localhost:3001/authenticate',{
-    email,
-    password})
-  .then( ({data}) => {
-    if(data.auth_token){ 
-      callback(data.auth_token)
-    }
-    else{
-      console.error('something went wrong')
-    }
-  })}
-
-const getToken = (email, password, component) => {
-    const callback = (token) => {
-      component.setState({auth_token: token})
-    }
-    grabTokenAPI(email, password, callback);
-    
-};
 
 class SignUp extends Component {
     state = { animate: "" }
-
-    createUser = (e) => {
-        e.preventDefault()
-        const firstName = e.target.First_Name.value
-        const lastName = e.target.Last_Name.value
-        const email = e.target.Email.value
-        const password = e.target.password.value
-        const adr1 = e.target[4].value
-        const adr2 = e.target[5].value
-        const mobile = e.target[6].value
-        const city = e.target.City.value
-        const state = e.target.State.value
-        const zip = e.target[9].value
-
-        let config = {
-          headers: {
-            'Authorization': window.auth_token,
-            'Content-Type': 'application/json'}
-        }
-
-        //create the customer
-        axios.post('http://localhost:3001/customers',{
-          state,
-          city,
-          zip_code: zip,
-          customer: {
-              first_name: firstName,
-              last_name: lastName,
-              mobile,
-              street1: adr1,
-              street2: adr2,
-              email,
-              password
-            },
-              config    
-        }).then( () => {
-          M.toast({html: 'You have successfully signed up!', classes: 'light-green accent-2'})
-          this.props.history.push('/dashboard')
-        })
-    }
 
     componentDidMount() {
         this.setState({animate: "animated slideInRight"})
@@ -135,10 +72,10 @@ class SignUp extends Component {
                         padding: '30px'
                     }}
                 >
-                    <Input type='text' label='First_Name'/>
-                    <Input type='text' label='Last_Name'/>
+                    <Input type='text' label='First Name'/>
+                    <Input type='text' label='Last Name'/>
                     <Input type='email' label='Email'/>
-                    <Input type='password' label='password'/>
+                    <Input type='password' label='Password'/>
                     <Input type='text' label='Address 1'/>
                     <Input type='text' label='Address 2'/>
                     <Input type='text' label='City'/>
@@ -146,10 +83,8 @@ class SignUp extends Component {
                     <Input type='number' label='Zip Code'/>
                     <Input type='tel' label='Phone Number'/>
                 <button
-                    className="btn waves-effect waves-light grey darken-4"
-                    type="submit"
-                    name="action">
-                        Submit
+                    className="btn waves-effect waves-light grey darken-4">
+                        Coming Soon...
                     <i
                         className="material-icons left">
                             check
@@ -161,5 +96,5 @@ class SignUp extends Component {
          )
     }
 }
-const SignUpUtil = {SignUp, getToken};
-export default SignUpUtil;
+
+export default SignUp

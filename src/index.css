@@ -1,5 +1,5 @@
 #root {
-  background-color: white;
+  background-color: rgb(84, 79, 85);
   margin: 0px;
   height: 100%;
 }
@@ -33,8 +33,8 @@
   background-color: green;
 }
 
-/* .stock_card_page {
-  background-color: rgb(84, 79, 85); */
+ .stock_card_page {
+  background-color: rgb(84, 79, 85); }
 
 .logo {
   height: 100vh;

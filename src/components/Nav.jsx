@@ -19,8 +19,8 @@ class Nav extends Component {
                 textAlign: "center"
               }}
             >
-              <div class="header">
-                {this.props.first_name + " " + this.props.last_name}
+              <div className="header">
+                Guest User
               </div>
             </div>
           </li>
@@ -29,7 +29,7 @@ class Nav extends Component {
               <img
                 src={default_profile}
                 alt="profile_photo"
-                class="circle"
+                className="circle"
                 style={{
                   width: "10rem",
                   height: "10rem",
@@ -46,45 +46,55 @@ class Nav extends Component {
           <table>
             <tbody>
               <tr style={{ borderBottom: " .5px solid #eceff1 " }}>
+                <td>
                 <li>
                   <Link to="/market">
                     <i className="material-icons ">timeline</i>List of Stocks
                   </Link>
                 </li>
+                </td>
               </tr>
 
               <tr style={{ borderBottom: " .5px solid #eceff1 " }}>
+                <td>
                 <li>
                   <Link to="learn1">
                     <i className="material-icons">assistant</i>
                     Learn
                   </Link>
                 </li>
+                </td>
               </tr>
               <tr style={{ borderBottom: " .5px solid #eceff1 " }}>
+                <td>
                 <li>
                   <Link className="waves-effect" to="/dashboard">
                     <i className="material-icons">dashboard</i>
                     Dashboard
                   </Link>
                 </li>
+                </td>
               </tr>
               <tr style={{ borderBottom: " .5px solid #eceff1 " }}>
+                <td>
                 <li>
                   <Link className="waves-effect" to="/signIn">
                     <i className="material-icons">perm_identity</i>
                     Sign-in
                   </Link>
                 </li>
+                </td>
               </tr>
 
               <tr style={{ borderBottom: " .5px solid #eceff1 " }}>
+                <td>
                 <li>
                   <Link className="waves-effect" to="#!">
                     <i className="material-icons">arrow_back</i>
                     Sign-Out
                   </Link>
                 </li>
+                </td>
               </tr>
             </tbody>
           </table>

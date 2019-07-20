@@ -6,7 +6,7 @@ const Search = (props) => {
         <>
             <NavLink 
                 to="#"
-                onClick ={props.click}
+                // onClick ={props.click}
                 className='btn-floating btn-large grey'>
                 <i 
                     className='material-icons grey darken-2'
