@@ -1,6 +1,6 @@
 import React from "react";
 import default_profile from "../images/default_profile.png";
-const Profile = props => {
+const Profile = () => {
   return (
     <div
       style={{
@@ -18,7 +18,7 @@ const Profile = props => {
           fontSize: "2.5rem"
         }}
       >
-        {props.first_name + " " + props.last_name}
+        Guest User
       </section>
       <div className="container" />
       <div className="col s12 m8 offset-m2 l6 offset-l3">

@@ -24,14 +24,14 @@ class Learn2 extends Component {
   render() {
     const { title, content, image, url } = this.state;
     return (
-      <section style={{ height: "100vh" }}>
+      <section id='learn2Page' style={{ height: "100vh" }}>
         <HeaderBar />
         <div>
           <div className="title">{title}</div>
           <img style={articleImgStyle} src={image} alt="" />
           <div className="article_content ">{content}</div>
           
-          <a className="link_to_more" href={url} target="_blank">
+          <a className="link_to_more" href={url} target="_blank" rel="noopener noreferrer">
             {" "}
             Read More{" "}
           </a>
